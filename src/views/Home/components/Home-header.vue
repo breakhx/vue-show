@@ -75,6 +75,7 @@ export default {
   .header-wrapper
     position: absolute
     z-index: 2
+    font-family: Arial, Helvetica, sans-serif
     width: 100%
     .header
       height: 40px

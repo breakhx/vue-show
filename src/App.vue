@@ -110,6 +110,5 @@
     padding: 0
   html, border
     width: 100%
-    font-family: Arial, Helvetica, sans-serif
-    background-color: #abcdef
+    background-color: #eee
 </style>

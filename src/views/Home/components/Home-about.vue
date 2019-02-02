@@ -128,17 +128,6 @@ export default {
           color: #424242
           font-weight bolder
           text-shadow:8px 8px 5px #aaa
-      .redlogo
-        width: 78px
-        height: 23px
-        background-color: red
-        color: #ffffff
-        line-height: 23px
-        text-align: center
-        font-weight: 600
-        border-radius: 5px
-        margin-top: 8px
-        font-size: 16px
       .about-mes
         padding-top: 40px
         text-indent: 2em

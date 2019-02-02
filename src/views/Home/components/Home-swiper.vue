@@ -37,23 +37,23 @@ export default {
     return {
       swiperOption: {
         autoplay: {
-        delay: 3000,
-        stopOnLastSlide: false,
-        disableOnInteraction: false
+          delay: 3000,
+          stopOnLastSlide: false,
+          disableOnInteraction: false
         },
         loop: true,
         speed: 1300,
         pagination: {
-            el: '.header .swiper-pagination',
-            type: 'bullets'
+          el: '.swiper-pagination',
+          type: 'bullets'
         },
         navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev'
         },
-        effect : 'fade', // 淡入淡出效果 ？不确定是否要加
+        effect: 'fade', // 淡入淡出效果 ？不确定是否要加
         fadeEffect: {
-            crossFade: true,
+          crossFade: true
         }
       }
     }
@@ -73,6 +73,11 @@ export default {
 </script>
 
 <style lang='stylus' scoped>
+  .SwiperWrapper >>> span.swiper-pagination-bullet-active
+    background-color: red
+  .SwiperWrapper >>> .swiper-pagination-bullet
+    width: 12px
+    height: 12px
   .SwiperWrapper
     width: 100%
     height: 800px

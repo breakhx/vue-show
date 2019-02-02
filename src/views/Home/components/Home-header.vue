@@ -49,7 +49,6 @@ export default {
   methods: {
     handelScroll (e) {
       this.ScrollTop = document.documentElement.scrollTop || window.pageYOffset || document.body.ScrollTop || '0'
-      console.log(this.ScrollTop)
       if (this.ScrollTop <= 40) {
         this.navcObj.top = (40 - this.ScrollTop) + 'px'
         this.navcObj.height = '100px'

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class='home'>
     <home-header></home-header>
     <home-swiper></home-swiper>
     <home-about></home-about>

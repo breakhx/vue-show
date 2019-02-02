@@ -77,7 +77,7 @@ export default {
     margin-top: 50px
     .content
       width: 1200px
-      height: 550pxs
+      height: 550px
       margin: 0 auto
       .about
         width: 472px

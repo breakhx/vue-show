@@ -8,24 +8,24 @@
     </div>
     <div class="content-nav" ref="navc" :style="navcObj">
       <ul class="content-ul">
-        <li class="left"  :style="lineA">
-          <router-link to="/" class="logo">金童壁画</router-link>
-        </li>
-        <li class="right"  :style="lineA">
-          <router-link to="/">联系我们</router-link>
-        </li>
-        <li class="right"  :style="lineA">
-          <router-link to="/">报价</router-link>
-        </li>
-        <li class="right"  :style="lineA">
-          <router-link to="/">案例</router-link>
-        </li>
-        <li class="right"  :style="lineA">
-          <router-link to="/">关于</router-link>
-        </li>
-        <li class="right"  :style="lineA">
-          <router-link to="/">首页</router-link>
-        </li>
+        <router-link to="/" class="logo">
+          <li class="left"  :style="lineA">金童壁画</li>
+        </router-link>
+        <router-link to="/">
+          <li class="right"  :style="lineA">联系我们</li>
+        </router-link>
+        <router-link to="/">
+          <li class="right"  :style="lineA">报价</li>
+        </router-link>
+        <router-link to="/">
+          <li class="right"  :style="lineA">案例</li>
+        </router-link>
+        <router-link to="/about">
+          <li class="right"  :style="lineA">关于</li>
+        </router-link>
+        <router-link to="/">
+          <li class="right"  :style="lineA">首页</li>
+        </router-link>
       </ul>
     </div>
   </nav>
@@ -60,6 +60,7 @@ export default {
       if (this.ScrollTop > 50) {
         this.$refs.navc.style.top = '0px'
       }
+      this.$emit('scroll', this.ScrollTop)
     }
   },
   mounted () {
@@ -72,8 +73,6 @@ export default {
 
 <style lang="stylus" scoped>
   .header-wrapper
-    position: absolute
-    z-index: 2
     font-family: Arial, Helvetica, sans-serif
     width: 100%
     .header
@@ -99,6 +98,7 @@ export default {
       position: fixed
       top: 40px
       left: 0px
+      z-index: 2
       .content-ul
         width: 1200px
         margin: 0 auto
@@ -113,12 +113,12 @@ export default {
           box-sizing: border-box
           border-bottom: 1px solid rgba(255, 255, 255, 0)
           transition: all 1s linear
-          a
-            text-decoration: none
-            color: #fff
-            transition: color 1s linear
-            &.logo
-              font-size: 20px
+        a
+          text-decoration: none
+          color: #fff
+          transition: color 1s linear
+          &.logo
+            font-size: 20px
         li:hover
           background:rgba(151, 146, 146, 0.6);
           border-bottom:1px solid orange

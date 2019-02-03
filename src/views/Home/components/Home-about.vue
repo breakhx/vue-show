@@ -5,10 +5,10 @@
         <h2 class="title">BRAND</h2>
         <h2 class="redlogo">关于我们</h2>
         <article class="about-mes">
-          <p>
+          <p class="animated" :class="Fleft">
             金童壁画成立于2000年，是一家专业墙绘服务品牌，提供室内外墙壁画服务为各大企业事业单位提供大型壁画；室外城市文化墙；新农村建设等；壁画采用耐腐蚀的丙烯为画材，保证8～9年不褪色。
           </p>
-          <p>
+          <p class="animated" :class="Fright">
             我们从设计到交付，我们始终以客户为核心，满足客户全方位的需求，尽职尽责、尽心尽力、尽善尽美。对每一个绘画细节都做到决不妥协，努力为客户打造一个专属定制的生活艺术空间。
           </p>
           <p>
@@ -28,32 +28,32 @@
           </p>
         </article>
         <div class="list">
-          <div class="item">
+          <div class="item animated" :class="Fade">
             <span class="iconfont">&#xe808;</span>
             <p class="painting">家庭彩绘</p>
             <p class="eng">HOME PAINTING</p>
           </div>
-          <div class="item">
+          <div class="item animated" :class="Fade">
             <span class="iconfont">&#xe61d;</span>
             <p class="painting">商业彩绘</p>
             <p class="eng">COMMERCIAL PAINTING</p>
           </div>
-          <div class="item">
+          <div class="item animated" :class="Fade">
             <span class="iconfont">&#xe653;</span>
             <p class="painting">校园彩绘</p>
             <p class="eng">SCHOOL PAINTING</p>
           </div>
-          <div class="item">
+          <div class="item animated" :class="Fade">
             <span class="iconfont">&#xe643;</span>
             <p class="painting">定制彩绘</p>
             <p class="eng">CUSTOM HAND DRAWING</p>
           </div>
-          <div class="item">
+          <div class="item animated" :class="Fade">
             <span class="iconfont">&#xe604;</span>
             <p class="painting">文化墙彩绘</p>
             <p class="eng">CULTURAL WALL</p>
           </div>
-          <div class="item">
+          <div class="item animated" :class="Fade">
             <span class="iconfont">&#xe64b;</span>
             <p class="painting">古建筑彩绘</p>
             <p class="eng">ANCIENT PAINTING</p>
@@ -67,7 +67,29 @@
 <script>
 import '@/assets/iconfont.css'
 export default {
-  name: 'Home-about'
+  name: 'Home-about',
+  props: ['data'],
+  data () {
+    return {
+      Fade: 'fadeOutDown',
+      Fleft: 'fadeOutLeft',
+      Fright: 'fadeOutRight'
+    }
+  },
+  watch: {
+    data (Val) {
+      Val > 340 ? this.Fleft = 'fadeInLeft' : this.Fleft = 'fadeOutLeft'
+      Val > 950 ? this.Fleft = 'fadeOutLeft' : this.Fleft = 'fadeInLeft'
+      Val > 450 ? this.Fright = 'fadeInRight' : this.Fright = 'fadeOutRight'
+      Val > 1020 ? this.Fright = 'fadeOutRight' : this.Fright = 'fadeInRight'
+      if (Val > 550) {
+        this.Fade = 'fadeInUp'
+      }
+      if (Val > 1180 || Val < 550) {
+        this.Fade = 'fadeOutDown'
+      }
+    }
+  }
 }
 </script>
 

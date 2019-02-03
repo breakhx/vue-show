@@ -37,12 +37,12 @@ export default {
     return {
       swiperOption: {
         autoplay: {
-          delay: 3000,
+          delay: 1900,
           stopOnLastSlide: false,
           disableOnInteraction: false
         },
         loop: true,
-        speed: 1300,
+        speed: 1500,
         pagination: {
           el: '.swiper-pagination',
           type: 'bullets'
@@ -57,22 +57,15 @@ export default {
         }
       }
     }
-  },
-  computed: {
-    swiper () {
-      return this.$refs.mySwiper.swiper
-    }
-  },
-  mounted () {
-    // current swiper instance
-    // 然后你就可以使用当前上下文内的swiper对象去做你想做的事了
-    console.log('this is current swiper instance object', this.swiper)
-    this.swiper.slideTo(3, 1000, false)
   }
 }
 </script>
 
 <style lang='stylus' scoped>
+  .SwiperWrapper >>> .swiper-button-next
+    right: 50px
+  .SwiperWrapper >>> .swiper-button-prev
+    left: 50px
   .SwiperWrapper >>> span.swiper-pagination-bullet-active
     background-color: red
   .SwiperWrapper >>> .swiper-pagination-bullet
@@ -81,6 +74,7 @@ export default {
   .SwiperWrapper
     width: 100%
     height: 800px
+    z-index: -1
     .SwiperImg
       width: 100%
       height: 100%

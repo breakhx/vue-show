@@ -1,9 +1,10 @@
 <template>
   <div class='home'>
-    <home-header></home-header>
+    <home-header @scroll='handelScroll'></home-header>
     <home-swiper></home-swiper>
-    <home-about></home-about>
+    <home-about :data="data"></home-about>
     <home-cases></home-cases>
+    <home-footer></home-footer>
   </div>
 </template>
 
@@ -12,27 +13,25 @@ import homeHeader from './components/Home-header.vue'
 import homeSwiper from './components/Home-swiper.vue'
 import homeAbout from './components/Home-about.vue'
 import homeCases from './components/Home-cases.vue'
+import homeFooter from './components/Home-footer.vue'
 export default {
   name: 'Home',
   components: {
     homeHeader,
     homeSwiper,
     homeAbout,
-    homeCases
+    homeCases,
+    homeFooter
+  },
+  data () {
+    return {
+      data: 0
+    }
+  },
+  methods: {
+    handelScroll (data) {
+      this.data = data
+    }
   }
 }
 </script>
-
-<style lang='stylus'>
-  .redlogo
-    width: 78px
-    height: 23px
-    background-color: red
-    color: #ffffff
-    line-height: 23px
-    text-align: center
-    font-weight: 600
-    border-radius: 5px
-    margin-top: 8px
-    font-size: 16px
-</style>

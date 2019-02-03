@@ -62,7 +62,6 @@ export default {
       height: 100%
       margin: 0 auto
       text-align: center
-      border: 1px solid black
       .temp
         margin-bottom: 12px
       h2:first-child
@@ -89,6 +88,7 @@ export default {
             color: #424242
             margin-right: 10px
             font-weight: 700
+            transition: all .2s linear
             &.active
               background-color: #f40
               border-radius: 8px
@@ -97,8 +97,4 @@ export default {
         li.item
           width: 100%
           height: 90%
-          display: flex
-          justify-content:space-around
-          flex-wrap: wrap
-          border: 1px solid black
 </style>

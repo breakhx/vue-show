@@ -13,6 +13,7 @@
           </p>
           <p>
             <a href="tel:13382638808">
+              <i>全国热线：138-6255-8738</i><br/>
               <i>欢迎来电咨询</i>
             </a>
           </p>
@@ -133,11 +134,16 @@ export default {
         text-indent: 2em
         line-height: 30px
         color: #424242
+        display: inline-block
         p
           margin-top: 2px
           line-height: 40px
           a
             text-decoration: none
             color: #424242
-            float: right
+            font-weight: 600
+            width: 100%
+            i
+              display: inline-block
+              float: right
 </style>

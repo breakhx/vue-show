@@ -27,7 +27,7 @@ export default {
     display: flex
     flex-wrap: wrap
     justify-content:space-around
-    .img-wrapper:hover img 
+    .img-wrapper:hover img
       width: 120%
       height: 120%
       transform: translate(-10%, -10%)

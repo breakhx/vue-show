@@ -1,34 +1,47 @@
 <template>
-  <nav class="header-wrapper">
-    <div class="header">
-      <div class="content">
-        <div class="right">咨询热线：138-6255-8738</div>
-        <div class="left">欢迎来到苏州金童墙面策划有限公司官方网站！</div>
+  <div>
+    <nav class="header-wrapper">
+      <div class="header">
+        <div class="content">
+          <div class="right">咨询热线：138-6255-8738</div>
+          <div class="left">欢迎来到苏州市金童墙面喷画有限公司官方网站！</div>
+        </div>
+      </div>
+      <div class="content-nav" ref="navc" :style="navcObj">
+        <ul class="content-ul">
+          <router-link to="/" class="logo">
+            <li class="left"  :style="lineA">金童壁画</li>
+          </router-link>
+          <router-link to="/">
+            <li class="right"  :style="lineA">联系我们</li>
+          </router-link>
+          <router-link to="/">
+            <li class="right"  :style="lineA">报价</li>
+          </router-link>
+          <router-link to="/">
+            <li class="right"  :style="lineA">案例</li>
+          </router-link>
+          <router-link to="/about">
+            <li class="right"  :style="lineA">关于</li>
+          </router-link>
+          <router-link to="/">
+            <li class="right"  :style="lineA">首页</li>
+          </router-link>
+        </ul>
+      </div>
+    </nav>
+    <div class="flexwrap" :style="StyleObj">
+      金童壁画 让你的墙面
+      <span>多</span>
+      <span>姿</span>
+      <span>多</span>
+      <span>彩</span> | <span>热线：138-6255-8738</span>
+      <div class='clean' @click="handelCleanClick">
+        <span></span>
+        <span></span>
       </div>
     </div>
-    <div class="content-nav" ref="navc" :style="navcObj">
-      <ul class="content-ul">
-        <router-link to="/" class="logo">
-          <li class="left"  :style="lineA">金童壁画</li>
-        </router-link>
-        <router-link to="/">
-          <li class="right"  :style="lineA">联系我们</li>
-        </router-link>
-        <router-link to="/">
-          <li class="right"  :style="lineA">报价</li>
-        </router-link>
-        <router-link to="/">
-          <li class="right"  :style="lineA">案例</li>
-        </router-link>
-        <router-link to="/about">
-          <li class="right"  :style="lineA">关于</li>
-        </router-link>
-        <router-link to="/">
-          <li class="right"  :style="lineA">首页</li>
-        </router-link>
-      </ul>
-    </div>
-  </nav>
+  </div>
 </template>
 
 <script>
@@ -43,7 +56,8 @@ export default {
       },
       lineA: {
         lineHeight: '100px'
-      }
+      },
+      StyleObj: {}
     }
   },
   methods: {
@@ -60,7 +74,15 @@ export default {
       if (this.ScrollTop > 50) {
         this.$refs.navc.style.top = '0px'
       }
+      if (this.ScrollTop > 1590) {
+        this.handelCleanClick()
+      }
       this.$emit('scroll', this.ScrollTop)
+    },
+    handelCleanClick () {
+      this.StyleObj = {
+        display: 'none'
+      }
     }
   },
   mounted () {
@@ -72,8 +94,50 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+  .flexwrap
+    width: 100%
+    height: 80px
+    position: fixed
+    left: 0px
+    bottom: 0px
+    z-index: 2
+    background-color: rgba(0, 0, 0, 0.6)
+    color: #ffffff
+    font-size: 26px
+    line-height: 80px
+    text-align: center
+    span:nth-child(1)
+      color: #ff4500
+    span:nth-child(2)
+      color: #ff0
+    span:nth-child(3)
+      color: #1E90FF
+    span:nth-child(4)
+      color: #7fff00
+    span:nth-child(5)
+      color: #FE642E
+    .clean
+      width: 60px
+      height: 60px
+      position: absolute
+      right: 25px
+      top: 10px
+      text-align: center
+      span
+        width: 10px
+        height: 55px
+        display: inline-block
+        position: absolute
+        left: 50%
+        top: 50%
+        margin-top: -27px
+        margin-left: -5px
+        background-color: #ffffff
+      span:nth-child(1)
+        transform: rotateZ(45deg)
+      span:nth-child(2)
+        transform: rotateZ(-45deg)
   .header-wrapper
-    font-family: Arial, Helvetica, sans-serif
     width: 100%
     .header
       height: 40px
@@ -89,6 +153,7 @@ export default {
         .right
           font-weight: 600
           float: right
+          color: #ffffff
         .left
           float: left
     .content-nav

@@ -8,6 +8,7 @@
   *
     margin: 0
     padding: 0
+    font-family: Arial, Helvetica, sans-serif !important
   html, border
     width: 100%
     background-color: #eee

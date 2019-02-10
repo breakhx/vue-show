@@ -78,10 +78,22 @@ export default {
   },
   watch: {
     data (Val) {
-      Val > 340 ? this.Fleft = 'fadeInLeft' : this.Fleft = 'fadeOutLeft'
-      Val > 950 ? this.Fleft = 'fadeOutLeft' : this.Fleft = 'fadeInLeft'
-      Val > 450 ? this.Fright = 'fadeInRight' : this.Fright = 'fadeOutRight'
-      Val > 1020 ? this.Fright = 'fadeOutRight' : this.Fright = 'fadeInRight'
+      if (Val > 340) {
+        this.Fleft = 'fadeInLeft'
+      }
+      if (Val > 1040 || Val < 340) {
+        this.Fleft = 'fadeOutLeft'
+      }
+      if (Val > 460) {
+        this.Fright = 'fadeInRight'
+      }
+      if (Val > 1150 || Val < 460) {
+        this.Fright = 'fadeOutRight'
+      }
+      // Val > 360 ? this.Fleft = 'fadeInLeft' : this.Fleft = 'fadeOutLeft'
+      // Val > 920 ? this.Fleft = 'fadeOutLeft' : this.Fleft = 'fadeInLeft'
+      // Val > 460 ? this.Fright = 'fadeInRight' : this.Fright = 'fadeOutRight'
+      // Val > 1000 ? this.Fright = 'fadeOutRight' : this.Fright = 'fadeInRight'
       if (Val > 550) {
         this.Fade = 'fadeInUp'
       }
@@ -94,6 +106,8 @@ export default {
 </script>
 
 <style lang='stylus' scoped>
+  *
+    box-sizing: content-box
   .H_about_wrapper
     width: 100%
     display: inline-block
@@ -142,6 +156,7 @@ export default {
               font-weight: 600
             p
               text-align: center
+              margin: 0
             .painting
               color: #444
               line-height: 30px

@@ -2,7 +2,7 @@
   <div class="foo-wrapper">
     <div class="foo-content">
       <ul class="left">
-        <li>地址：苏州市</li>
+        <li>地址：苏州市相城区元和大道</li>
         <li>邮箱：1057775855@qq.com</li>
         <li>咨询热线：<strong>13862558738</strong></li>
         <li>联系人：何先生</li>
@@ -11,9 +11,11 @@
       <div class="mes-wx">
         <div class="bi"></div>
         <div class="bi"></div>
+        <!-- <div class="bi"></div> -->
         <div class="mes">
           <div>微信二维码</div>
-          <div>QQ二维码</div>
+          <div>淘宝店铺二维码</div>
+          <!-- <div>微信公众号</div> -->
         </div>
       </div>
       <div class="right">
@@ -45,7 +47,7 @@ export default {
       display: flex
       justify-content: space-around
       ul.left
-        width: 30%
+        width: 26%
         height: 100%
         // float: left
         list-style: none
@@ -58,20 +60,18 @@ export default {
       .mes-wx
         flex: 1
         height: 100%
-        display: inline-block
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-around
         color: #fff
         div.bi
-          width: 170px
-          height: 170px
-          float: left
+          width: 165px
+          height: 165px
+          background-size: 100%
         div.bi:nth-child(1)
-          margin-right: 70px
-          margin-left: 40px
           background-image: url('../../../assets/wxlx.jpeg')
-          background-size: 100%
         div.bi:nth-child(2)
-          background-image: url('../../../assets/wxlx.jpeg')
-          background-size: 100%
+          background-image: url('https://gqrcode.alicdn.com/img?type=cs&shop_id=387687821&seller_id=2577259609&w=140&h=140&el=q&v=1')
         .mes
           width: 100%
           float: left

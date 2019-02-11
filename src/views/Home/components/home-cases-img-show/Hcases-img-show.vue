@@ -43,4 +43,8 @@ export default {
         width: 100%
         height: 100%
         transition: all 1.2s linear
+  @media (max-width:600px) and (min-width:300px)
+    .img-wrapper
+      width: 45% !important
+      height: 150px !important
 </style>

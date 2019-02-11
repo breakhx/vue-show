@@ -10,7 +10,6 @@
   "dependencies": {
     "animate.css": "^3.7.0",
     "axios": "^0.18.0",
-    "bootstrap": "^4.2.1",
     "stylus-loader": "^3.0.2",
     "vue": "^2.5.21",
     "vue-awesome-swiper": "^3.1.3",

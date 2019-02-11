@@ -93,4 +93,27 @@ export default {
       span
         color: #fff
         font-size: 30px
+  @media (max-width:600px) and (min-width:300px)
+    .foo-wrapper
+      margin-top: 20px !important
+      .foo-content
+        width: 100%
+        margin: 0
+        padding: 10px
+        ul.left
+          width: 100%
+          li
+            font-size: 13px
+        .mes-wx
+          display: none
+        .right
+          display: block
+          // display: none
+          span:first-child
+            color: yellow
+          span:nth-child(2)
+            color: #f40
+          span
+            font-size: 16px
+            line-height: 42px
 </style>

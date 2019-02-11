@@ -97,4 +97,20 @@ export default {
         li.item
           width: 100%
           height: 90%
+  @media (max-width:600px) and (min-width:300px)
+    .Hcases-wrapper
+      width: 100vw !important
+      height: 600px !important
+      .content
+        width: 100% !important
+        margin: 0 !important
+        h2:first-child
+          font-size: 26px !important
+        li.title
+          height: 30px !important
+          div
+            width: 80px !important
+            line-height: 30px !important
+            &.active
+              font-size: 18px !important
 </style>

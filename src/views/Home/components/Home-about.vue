@@ -73,32 +73,52 @@ export default {
     return {
       Fade: 'fadeOutDown',
       Fleft: 'fadeOutLeft',
-      Fright: 'fadeOutRight'
+      Fright: 'fadeOutRight',
+      OfWidth: document.body.offsetWidth
     }
   },
   watch: {
     data (Val) {
-      if (Val > 340) {
-        this.Fleft = 'fadeInLeft'
-      }
-      if (Val > 1040 || Val < 340) {
-        this.Fleft = 'fadeOutLeft'
-      }
-      if (Val > 460) {
-        this.Fright = 'fadeInRight'
-      }
-      if (Val > 1150 || Val < 460) {
-        this.Fright = 'fadeOutRight'
-      }
-      // Val > 360 ? this.Fleft = 'fadeInLeft' : this.Fleft = 'fadeOutLeft'
-      // Val > 920 ? this.Fleft = 'fadeOutLeft' : this.Fleft = 'fadeInLeft'
-      // Val > 460 ? this.Fright = 'fadeInRight' : this.Fright = 'fadeOutRight'
-      // Val > 1000 ? this.Fright = 'fadeOutRight' : this.Fright = 'fadeInRight'
-      if (Val > 550) {
-        this.Fade = 'fadeInUp'
-      }
-      if (Val > 1180 || Val < 550) {
-        this.Fade = 'fadeOutDown'
+      var a = this.OfWidth
+      if (a > 500) {
+        if (Val > 340) {
+          this.Fleft = 'fadeInLeft'
+        }
+        if (Val > 1040 || Val < 340) {
+          this.Fleft = 'fadeOutLeft'
+        }
+        if (Val > 460) {
+          this.Fright = 'fadeInRight'
+        }
+        if (Val > 1150 || Val < 460) {
+          this.Fright = 'fadeOutRight'
+        }
+        if (Val > 550) {
+          this.Fade = 'fadeInUp'
+        }
+        if (Val > 1180 || Val < 550) {
+          this.Fade = 'fadeOutDown'
+        }
+      } else if (a <= 500) {
+        console.log(Val)
+        if (Val >= 0) {
+          this.Fleft = 'fadeInLeft'
+        }
+        if (Val > 620 || (Val < 0 && Val !== 0)) {
+          this.Fleft = 'fadeOutLeft'
+        }
+        if (Val > 145) {
+          this.Fright = 'fadeInRight'
+        }
+        if (Val > 800 || Val < 145) {
+          this.Fright = 'fadeOutRight'
+        }
+        if (Val > 650) {
+          this.Fade = 'fadeInUp'
+        }
+        if (Val > 1460 || Val < 650) {
+          this.Fade = 'fadeOutDown'
+        }
       }
     }
   }
@@ -172,6 +192,7 @@ export default {
         line-height: 30px
         color: #424242
         display: inline-block
+        overflow: hidden
         p
           margin-top: 2px
           line-height: 40px
@@ -183,4 +204,33 @@ export default {
             i
               display: inline-block
               float: right
+  @media (max-width:600px) and (min-width:300px)
+    .content
+      width: 100vw !important
+      height: 520px !important
+      .about
+        width: 100% !important
+        float: none
+      .title
+        text-align: center
+        margin-bottom: 5px
+      .redlogo
+        margin: 0 auto
+      .service
+        width: 100% !important
+        float: none
+        box-sizing: border-box
+        .list
+          .item
+            width: 100px !important
+            height: 135px !important
+            font-size: 2px
+            span
+              width: 60px !important
+              height: 60px !important
+              font-size: 35px !important
+              line-height: 60px !important
+      .about-mes
+        padding: 20px 5px 0px !important
+        box-sizing: border-box
 </style>

@@ -224,7 +224,7 @@ export default {
           .item
             width: 100px !important
             height: 135px !important
-            font-size: 2px
+            font-size: 12px
             span
               width: 60px !important
               height: 60px !important

@@ -80,7 +80,7 @@ export default {
             display: inline-block
             text-align: center
     .right
-      width: 30%
+      width: 40%
       height: 100%
       // float: right
       display: flex
@@ -107,7 +107,7 @@ export default {
         .mes-wx
           display: none
         .right
-          display: block
+          display: none
           // display: none
           span:first-child
             color: yellow

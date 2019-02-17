@@ -38,8 +38,7 @@
       </div>
     </nav>
     <div class="flexwrap" :style="StyleObj">
-      &nbsp;&nbsp;&nbsp;金童壁画 让你的墙面
-      <span>多</span>
+      &nbsp;&nbsp;&nbsp;金童壁画 让你的墙面<span>多</span>
       <span>姿</span>
       <span>多</span>
       <span>彩</span> | <span>热线：138-6255-8738</span>
@@ -250,7 +249,7 @@ export default {
           width: 100%
           margin: 0px
           div
-            font-size: .2px
+            font-size: 12px
     .content-nav
       height: 70px !important
       position: relative
@@ -305,7 +304,7 @@ export default {
       width: 100vw
       height: 50px
       line-height: 50px
-      font-size: 12px
+      font-size: 13px
       text-align: left
       // padding-left: 20px
       .clean

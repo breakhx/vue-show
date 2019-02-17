@@ -36,16 +36,12 @@ export default {
   mounted () {
     console.log('%c欢迎来到金童彩绘',
       `display:inline-block;
-      line-height: 80px;
-      background-color: #abcdef;
       font-size: 20px;
-    color: yellow;`)
+    color: red;`)
     console.log('%c联系方式133-8263-8808', `
       display:inline-block;
-      line-height: 80px;
-      background-color: #abcdef;
       font-size: 20px;
-      color: yellow;
+      color: red;
     `)
   }
 }

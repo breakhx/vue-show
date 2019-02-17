@@ -2,25 +2,25 @@
   <swiper :options="swiperOption" ref="mySwiper" class="SwiperWrapper">
     <!-- slides -->
     <swiper-slide>
-      <img class="SwiperImg" src="@/assets/1.jpeg">
+      <img class="SwiperImg" src="http://crazyjack.top/assets/jtsq2.jpg">
     </swiper-slide>
     <swiper-slide>
-      <img class="SwiperImg" src="@/assets/2.jpeg">
+      <img class="SwiperImg" src="http://crazyjack.top/assets/jtct11.jpg">
     </swiper-slide>
     <swiper-slide>
-      <img class="SwiperImg" src="@/assets/3.jpeg">
+      <img class="SwiperImg" src="http://crazyjack.top/assets/jtyry1.jpg">
     </swiper-slide>
     <swiper-slide>
-      <img class="SwiperImg" src="@/assets/3.jpeg">
+      <img class="SwiperImg" src="http://crazyjack.top/assets/jtct12.jpg">
     </swiper-slide>
     <swiper-slide>
-      <img class="SwiperImg" src="@/assets/4.jpeg">
+      <img class="SwiperImg" src="http://crazyjack.top/assets/jtyry5.jpg">
     </swiper-slide>
     <swiper-slide>
-      <img class="SwiperImg" src="@/assets/5.jpeg">
+      <img class="SwiperImg" src="http://crazyjack.top/assets/jtyry3.jpg">
     </swiper-slide>
     <swiper-slide>
-      <img class="SwiperImg" src="@/assets/3.jpeg">
+      <img class="SwiperImg" src="http://crazyjack.top/assets/jtct7.jpg">
     </swiper-slide>
     <!-- Optional controls -->
     <div class="swiper-pagination"  slot="pagination"></div>
@@ -37,12 +37,12 @@ export default {
     return {
       swiperOption: {
         autoplay: {
-          delay: 1900,
+          delay: 2000,
           stopOnLastSlide: false,
           disableOnInteraction: false
         },
         loop: true,
-        speed: 1500,
+        speed: 1800,
         pagination: {
           el: '.swiper-pagination',
           type: 'bullets'
@@ -51,9 +51,9 @@ export default {
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev'
         },
-        effect: 'fade', // 淡入淡出效果 ？不确定是否要加
+        effect: 'coverflow',
         fadeEffect: {
-          crossFade: true
+          // crossFade: true
         }
       }
     }
@@ -74,7 +74,7 @@ export default {
   .SwiperWrapper
     width: 100%
     height: 800px
-    z-index: -1
+    z-index: 1
     .SwiperImg
       width: 100%
       height: 100%

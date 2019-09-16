@@ -143,6 +143,7 @@ export default {
     width: 100%
     height: 80px
     position: fixed
+    -ms-position: absolute
     left: 0px
     bottom: 0px
     z-index: 2
